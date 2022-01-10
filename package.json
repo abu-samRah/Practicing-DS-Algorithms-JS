@@ -1,0 +1,20 @@
+{
+  "name": "practicing-ds-algorithms-js",
+  "version": "1.0.0",
+  "description": "Learning &amp; Practicing Data Structures &amp; Algorithms using JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abu-samRah/Practicing-DS-Algorithms-JS.git"
+  },
+  "author": "abdullah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abu-samRah/Practicing-DS-Algorithms-JS/issues"
+  },
+  "homepage": "https://github.com/abu-samRah/Practicing-DS-Algorithms-JS#readme"
+}
