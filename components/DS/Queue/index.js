@@ -47,6 +47,22 @@
   export default Queue
 
 
+/**
+ * Types of queues:
+ *Circular queue: is the extended version of a regular queue where the last element is connected to the first element. 
+                    Thus forming a circle-like structure. The circular queue solves the major limitation of the normal queue. 
+                    In a normal queue, after a bit of insertion and deletion, there will be non-usable empty space.
+
+  *Priority queue: is a special type of queue in which each element is associated with a priority value. 
+                     And, elements are served on the basis of their priority. That is, higher priority elements are served first. 
+                     Best implemented with Heaps.
+                     Applications: Dijkstra's algorithm.
+
+  *Double Ended queue(Deque):  is a type of queue in which insertion and removal of elements can either be performed from the front or the rear. 
+                               Thus, it does not follow FIFO rule (First In First Out).
+
+ */
+
 // Add this to the main index.js file to start using and testing queues
 /**
 import Queue from './components/DS/Queue/index.js'
