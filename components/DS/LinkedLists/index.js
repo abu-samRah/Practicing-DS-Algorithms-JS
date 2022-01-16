@@ -86,6 +86,26 @@ class LinkedList {
             tempHead = tempHead.next
           }
     }
+
+    sort(){
+        if(!this.head || !this.head.next) return
+        let tempHead = this.head
+        let tempLength = this.length
+        let counter  = 0
+        while(tempHead && tempHead.next){
+            for(let temp= this.head.next; temp.next !== undefined && counter <tempLength;temp= temp.next){
+                if(temp.value > temp.next.value){
+                    const valueToSwap = temp.value
+                    temp.value = temp.next.value
+                    temp.next.value = valueToSwap
+                }
+            }
+            counter++
+            tempLength --
+            tempHead = tempHead.next
+        }
+       
+    }
     print(){
         let tempHead = this.head
         while (tempHead != null) {
