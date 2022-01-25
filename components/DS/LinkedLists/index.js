@@ -91,16 +91,18 @@ class LinkedList {
         if(!this.head || !this.head.next) return
         let tempHead = this.head
         let tempLength = this.length
-        let counter  = 0
+
         while(tempHead && tempHead.next){
-            for(let temp= this.head.next; temp.next !== undefined && counter <tempLength;temp= temp.next){
+            let counter  = 0
+            for(let temp= this.head; temp.next !== undefined && counter <tempLength;temp= temp.next){
                 if(temp.value > temp.next.value){
                     const valueToSwap = temp.value
                     temp.value = temp.next.value
                     temp.next.value = valueToSwap
                 }
+                counter++
             }
-            counter++
+
             tempLength --
             tempHead = tempHead.next
         }
