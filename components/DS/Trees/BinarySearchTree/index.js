@@ -6,7 +6,7 @@ class Node {
   }
 }
 
-class BST {
+export default class BST {
   constructor() {
     this.root = null;
   }
@@ -72,13 +72,13 @@ class BST {
 
   preOrder(node) {
     if (node) {
-      console.log(node.value);
-      this.preOrder(node.data);
+      console.log(node.data);
+      this.preOrder(node.left);
       this.preOrder(node.right);
     }
   }
 
-  inOrder() {
+  inOrder(node) {
     if (node) {
       this.inOrder(node.left);
       console.log(node.data);
@@ -86,7 +86,7 @@ class BST {
     }
   }
 
-  postOrder() {
+  postOrder(node) {
     if (node) {
       this.postOrder(node.left);
       this.postOrder(node.right);
@@ -108,4 +108,39 @@ class BST {
       return this.search(node.right, value);
     }
   }
+
+  // Each internal node has exactly two or no children
+  isFullTree(node) {
+    if (!node) return true;
+
+    if (!node.left && !node.right) return true;
+
+    if (node.left && node.right) 
+      return this.isFullTree(node.left) && this.isFullTree(node.right)
+
+    return false
+  }
+
+  // Each internal node has exactly two children & all leaf nodes are on the same level
+  isPerfectTree(node,depth,level=0) {
+    if (!node) return true;
+
+    if (!node.left && !node.right) return depth === level + 1;
+
+    if (node.left && node.right) 
+      return this.isPerfectTree(node.left,depth,level +1) &&  this.isPerfectTree(node.right,depth,level +1)
+
+    return false
+  }
+
+  //This implementation is valid incase of a perfect binary tree only
+  calculateDepthOfPerfectTree(node){
+    let depth =0
+    while(node){
+      depth++
+      node = node.left
+    }
+    return depth
+  }
+  
 }
