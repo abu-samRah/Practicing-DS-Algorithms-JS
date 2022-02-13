@@ -25,11 +25,12 @@ BST.insert(27);
 
 var root = BST.getRootNode();
 console.log("inorder traversal");
-// prints 5 7 9 10 13 15 17 22 25 27
-/* BST.inOrder(root); */
+
+BST.remove(5);
+
+//BST.inOrder(root); 
 
  // Removing node with no children
-BST.remove(5);
 
 //          15
 //         /  \
@@ -42,9 +43,8 @@ BST.remove(5);
 var root = BST.getRootNode();
 
 // prints 7 9 10 13 15 17 22 25 27
-BST.inOrder(root); 
 
-/* // Removing node with one child
+ // Removing node with one child
 BST.remove(7);
 
 //          15
@@ -81,7 +81,5 @@ BST.postOrder(root);
 console.log("preorder traversal");
 BST.preOrder(root);
 
-console.log(BST.isFullTree(root))
-const depth = BST.calculateDepthOfPerfectTree(root)
-console.log(BST.isPerfectTree(root,depth))
- */
+
+ 

@@ -33,14 +33,14 @@ export default class BST {
   }
 
   removeNode(node, data) {
-    if (!node) return null;
+    if (node === null) return null;
 
-    if (data < node.value) {
+    if (data < node.data) {
       node.left = this.removeNode(node.left, data);
       return node;
     }
 
-    if (data > node.value) {
+    if (data > node.data) {
       node.right = this.removeNode(node.right, data);
       return data;
     } else {
