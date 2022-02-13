@@ -23,12 +23,13 @@ BST.insert(27);
 //     / \    /
 //    5   9  17
 
-var root = BST.getRootNode();
+const root = BST.getRootNode();
+console.log('count nodes ',BST.countNodes(root))
 console.log("inorder traversal");
 
 BST.remove(5);
 
-//BST.inOrder(root); 
+BST.inOrder(root); 
 
  // Removing node with no children
 
@@ -40,7 +41,7 @@ BST.remove(5);
 //       \    /
 //        9  17
 
-var root = BST.getRootNode();
+
 
 // prints 7 9 10 13 15 17 22 25 27
 
@@ -56,8 +57,6 @@ BST.remove(7);
 //           17
       
 
-var root = BST.getRootNode();
-
 // prints 9 10 13 15 17 22 25 27
 BST.inOrder(root);
 
@@ -70,7 +69,6 @@ BST.remove(15);
 //       / \   / \
 //      9  13 22  27
 
-var root = BST.getRootNode();
 console.log("inorder traversal");
 
 // prints 9 10 13 17 22 25 27
@@ -80,6 +78,8 @@ console.log("postorder traversal");
 BST.postOrder(root);
 console.log("preorder traversal");
 BST.preOrder(root);
+
+
 
 
  

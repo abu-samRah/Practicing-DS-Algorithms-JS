@@ -142,5 +142,10 @@ export default class BST {
     }
     return depth
   }
+
+  countNodes(root){
+    if(!root) return 0
+    return (1 + this.countNodes(root.left) + this.countNodes(root.right))
+  }
   
 }
