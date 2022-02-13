@@ -23,6 +23,9 @@ A complete binary tree is just like a full binary tree, but with two major diffe
     *The last leaf element might not have a right sibling i.e. a complete binary tree doesn't have to be a full binary tree.
     *the height of a complete binary tree is log(n) , we are not going to next level until the prev level is full.
 
+4. Balanced Binary Tree:
+A balanced binary tree, also referred to as a height-balanced binary tree, is defined as a binary tree in which the height of the
+ left and right subtree of any node differ by not more than 1.
 */
 
 // to convert an array of objects into a tree 
