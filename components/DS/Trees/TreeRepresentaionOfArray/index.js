@@ -14,7 +14,8 @@ A binary tree is a tree data structure in which each parent node can have at mos
 A full Binary tree is a special type of binary tree in which every parent node/internal node has either two or no children.
 
 2. Perfect Binary Tree
-A perfect binary tree is a type of binary tree in which every internal node has exactly two child nodes and all the leaf nodes are at the same level & that level is complietly filled.
+A perfect binary tree is a type of binary tree in which every internal node has exactly two child nodes and all the leaf nodes are at the same level
+& that level is complietly filled.
 
 3. Complete Binary Tree
 A complete binary tree is just like a full binary tree, but with two major differences
@@ -26,6 +27,14 @@ A complete binary tree is just like a full binary tree, but with two major diffe
 4. Balanced Binary Tree:
 A balanced binary tree, also referred to as a height-balanced binary tree, is defined as a binary tree in which the height of the
  left and right subtree of any node differ by not more than 1.
+ 
+5. Tries:
+A trie is a variant of an n-ary tree in which characters are stored at each node. Each path down the tree may
+represent a word.
+
+Very commonly, a trie is used to store the entire (English) language for quick prefix lookups. 
+While a hash table can quickly look up whether a string is a valid word, it cannot tell us if a string is a prefix of any valid words. 
+A trie can do this very quickly.
 */
 
 // to convert an array of objects into a tree 
