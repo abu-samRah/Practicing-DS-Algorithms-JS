@@ -94,3 +94,33 @@ q.deQueue();
 q.display();
 
  */
+
+
+/*
+Map based implemntation 
+class MyQueue extends Map {
+  constructor() {
+    super();
+    this.insertionIndex = 0;
+    this.removalIndex = 0;
+  }
+
+  enqueue(element) {
+    this.set(this.insertionIndex, element);
+    this.insertionIndex++;
+  }
+
+  dequeue() {
+    const el = this.get(this.removalIndex);
+    if (typeof el !== 'undefined') {
+      this.delete(this.removalIndex);
+      this.removalIndex++;
+    }
+    return el;
+  }
+    
+  isEmpty(){
+      return this.insertionIndex === this.removalIndex
+  }
+}
+*/
